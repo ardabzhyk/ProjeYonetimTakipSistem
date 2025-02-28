@@ -1,0 +1,52 @@
+@model ProjeYonetimTakipSistem.Models.Proje
+
+@{
+    ViewData["Title"] = "Proje Sil";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">@ViewData["Title"]</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-danger" role="alert">
+                        Bu projeyi silmek istediğinize emin misiniz?
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Ad)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Ad)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Aciklama)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Aciklama)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.BaslangicTarihi)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.BaslangicTarihi)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.BitisTarihi)</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.BitisTarihi)</dd>
+
+                        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Durum)</dt>
+                        <dd class="col-sm-9">
+                            <span class="badge @(Model.Durum == ProjeDurumu.Baslamadi ? "bg-secondary" :
+                                               Model.Durum == ProjeDurumu.DevamEdiyor ? "bg-primary" :
+                                               Model.Durum == ProjeDurumu.Tamamlandi ? "bg-success" :
+                                               "bg-danger")">
+                                @Html.DisplayFor(model => model.Durum)
+                            </span>
+                        </dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger">Sil</button>
+                        <a asp-action="Index" class="btn btn-secondary">İptal</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

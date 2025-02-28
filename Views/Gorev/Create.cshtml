@@ -1,0 +1,189 @@
+@model ProjeYonetimTakipSistem.Models.Gorev
+
+@{
+    ViewData["Title"] = "Yeni Görev Oluştur";
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <form id="gorevForm" asp-action="Create">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ProjeId" class="control-label">Proje</label>
+                    <select asp-for="ProjeId" class="form-select" asp-items="ViewBag.ProjeId">
+                        <option value="">Proje Seçiniz</option>
+                    </select>
+                    <span asp-validation-for="ProjeId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Ad" class="control-label">Görev Adı</label>
+                    <input asp-for="Ad" class="form-control" />
+                    <span asp-validation-for="Ad" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Aciklama" class="control-label">Açıklama</label>
+                    <textarea asp-for="Aciklama" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Aciklama" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="AtananKullaniciId" class="control-label">Atanan Kullanıcı</label>
+                    <select asp-for="AtananKullaniciId" class="form-select" asp-items="ViewBag.AtananKullaniciId">
+                        <option value="">Kullanıcı Seçiniz</option>
+                    </select>
+                    <span asp-validation-for="AtananKullaniciId" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="BaslangicTarihi" class="control-label">Başlangıç Tarihi</label>
+                            <input asp-for="BaslangicTarihi" class="form-control" type="date" />
+                            <span asp-validation-for="BaslangicTarihi" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="BitisTarihi" class="control-label">Bitiş Tarihi</label>
+                            <input asp-for="BitisTarihi" class="form-control" type="date" />
+                            <span asp-validation-for="BitisTarihi" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Durum" class="control-label">Durum</label>
+                            <select asp-for="Durum" class="form-select" asp-items="ViewBag.Durum">
+                                <option value="">Durum Seçiniz</option>
+                            </select>
+                            <span asp-validation-for="Durum" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Oncelik" class="control-label">Öncelik</label>
+                            <select asp-for="Oncelik" class="form-select" asp-items="ViewBag.Oncelik">
+                                <option value="">Öncelik Seçiniz</option>
+                            </select>
+                            <span asp-validation-for="Oncelik" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Oluştur</button>
+                    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            // Proje seçildiğinde kullanıcıları güncelle
+            $('#ProjeId').change(function () {
+                var projeId = $(this).val();
+                if (projeId) {
+                    getProjeKullanicilari(projeId);
+                } else {
+                    $('#AtananKullaniciId').empty().append('<option value="">Kullanıcı Seçiniz</option>');
+                }
+            });
+
+            // Form gönderimi
+            $('#gorevForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Form verilerini topla
+                var formData = $(this).serializeArray();
+                var formObject = {};
+                formData.forEach(function (item) {
+                    formObject[item.name] = item.value;
+                });
+
+                // Form verilerini konsola yazdır
+                console.log('Form verileri:', formObject);
+
+                // Validasyon kontrolleri
+                var errors = [];
+
+                if (!formObject.ProjeId) {
+                    errors.push('Proje seçimi zorunludur.');
+                }
+                if (!formObject.Ad) {
+                    errors.push('Görev adı zorunludur.');
+                }
+                if (!formObject.AtananKullaniciId) {
+                    errors.push('Kullanıcı seçimi zorunludur.');
+                }
+                if (!formObject.BaslangicTarihi) {
+                    errors.push('Başlangıç tarihi zorunludur.');
+                }
+                if (!formObject.BitisTarihi) {
+                    errors.push('Bitiş tarihi zorunludur.');
+                }
+                if (!formObject.Durum) {
+                    errors.push('Durum seçimi zorunludur.');
+                }
+                if (!formObject.Oncelik) {
+                    errors.push('Öncelik seçimi zorunludur.');
+                }
+
+                // Tarih validasyonları
+                var baslangicTarihi = new Date(formObject.BaslangicTarihi);
+                var bitisTarihi = new Date(formObject.BitisTarihi);
+                var bugun = new Date();
+                bugun.setHours(0, 0, 0, 0);
+
+                if (baslangicTarihi < bugun) {
+                    errors.push('Başlangıç tarihi bugünden önce olamaz.');
+                }
+                if (bitisTarihi < baslangicTarihi) {
+                    errors.push('Bitiş tarihi başlangıç tarihinden önce olamaz.');
+                }
+
+                if (errors.length > 0) {
+                    alert('Lütfen aşağıdaki hataları düzeltin:\n\n' + errors.join('\n'));
+                    return false;
+                }
+
+                // Form verilerini gönder
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    success: function (response) {
+                        if (response.success) {
+                            alert('Görev başarıyla oluşturuldu.');
+                            window.location.href = '/Gorev/Index';
+                        } else {
+                            alert('Hata: ' + response.message);
+                            if (response.errors) {
+                                console.log('Validasyon hataları:', response.errors);
+                            }
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert('Bir hata oluştu: ' + error);
+                        console.error('AJAX hatası:', xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

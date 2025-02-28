@@ -1,0 +1,382 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\views\\gorev\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:views\\gorev\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\controllers\\gorevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:controllers\\gorevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\models\\gorev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:models\\gorev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\models\\viewmodels\\kullaniciviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:models\\viewmodels\\kullaniciviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\views\\kullanici\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:views\\kullanici\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\models\\viewmodels\\kullaniciataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:models\\viewmodels\\kullaniciataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\models\\viewmodels\\kullaniciviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:models\\viewmodels\\kullaniciviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\views\\gorev\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:views\\gorev\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\controllers\\projecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:controllers\\projecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|c:\\users\\bzhyk\\source\\repos\\projeyonetimtakipsistem\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{71F44786-7AE1-4C0B-8579-1E041CB892F4}|ProjeYonetimTakipSistem.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gorev.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\Gorev.cs",
+              "RelativeDocumentMoniker": "Models\\Gorev.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\Gorev.cs",
+              "RelativeToolTip": "Models\\Gorev.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T20:08:49.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Gorev\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Gorev\\Create.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Gorev\\Create.cshtml",
+              "RelativeToolTip": "Views\\Gorev\\Create.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAUwLwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T19:25:18.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KullaniciViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\KullaniciViewModels.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciViewModels.cs",
+              "RelativeToolTip": "Models\\ViewModels\\KullaniciViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T19:22:05.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KullaniciViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\KullaniciViewModel.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\KullaniciViewModel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwCUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T19:21:48.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "additional-methods.js",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeToolTip": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAwwAsBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-28T17:21:14.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "bootstrap.esm.js",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+              "ViewState": "AgIAACcCAAAAAAAAAAAAwDoCAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-28T16:59:41.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "bootstrap.bundle.js",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "ViewState": "AgIAAL8DAAAAAAAAAAAIwNIDAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-28T16:59:38.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Kullanici\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Kullanici\\Create.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Kullanici\\Create.cshtml",
+              "RelativeToolTip": "Views\\Kullanici\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T16:57:19.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAIwD4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T14:38:07.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GorevController.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\GorevController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GorevController.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\GorevController.cs",
+              "RelativeToolTip": "Controllers\\GorevController.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAIwEUBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:32:19.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KullaniciAtaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciAtaViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\KullaniciAtaViewModel.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Models\\ViewModels\\KullaniciAtaViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\KullaniciAtaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T19:22:35.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T14:30:39.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjeYonetimTakipSistem.AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0\\ProjeYonetimTakipSistem.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T14:14:58.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwC0AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T14:02:36.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProjeController.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\ProjeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjeController.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\ProjeController.cs",
+              "RelativeToolTip": "Controllers\\ProjeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwC0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T13:37:12.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "KullaniciController.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\KullaniciController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KullaniciController.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Controllers\\KullaniciController.cs",
+              "RelativeToolTip": "Controllers\\KullaniciController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T14:38:09.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCYAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T15:55:11.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Gorev\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Gorev\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Gorev\\Index.cshtml",
+              "RelativeToolTip": "Views\\Gorev\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwB4AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T15:55:33.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:22:33.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "libman.json",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\libman.json",
+              "RelativeDocumentMoniker": "libman.json",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\libman.json",
+              "RelativeToolTip": "libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-28T12:19:16.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T12:19:07.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\bzhyk\\source\\repos\\ProjeYonetimTakipSistem\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T12:13:51.584Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

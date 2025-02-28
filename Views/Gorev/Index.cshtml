@@ -1,0 +1,58 @@
+@model IEnumerable<ProjeYonetimTakipSistem.Models.Gorev>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Görevler";
+    var currentUser = await UserManager.GetUserAsync(User);
+    var isAdmin = await UserManager.IsInRoleAsync(currentUser, "Admin");
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    @if (isAdmin)
+    {
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Yeni Görev Oluştur</a>
+        </p>
+    }
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Ad</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Proje: @item.Proje.Ad</h6>
+                        <p class="card-text">@item.Aciklama</p>
+                        <div class="mb-2">
+                            <span class="badge bg-@(item.Durum == GorevDurumu.Baslamadi ? "warning" : 
+                                                item.Durum == GorevDurumu.DevamEdiyor ? "primary" : "success")">
+                                @item.Durum.ToString()
+                            </span>
+                        </div>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Atanan: @(item.AtananKullanici?.Email ?? "Atanmamış")
+                                <br />
+                                Başlangıç: @item.BaslangicTarihi.ToShortDateString()
+                                <br />
+                                Bitiş: @item.BitisTarihi.ToShortDateString()
+                            </small>
+                        </p>
+                        <div class="btn-group">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detaylar</a>
+                            @if (isAdmin)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Sil</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div> 

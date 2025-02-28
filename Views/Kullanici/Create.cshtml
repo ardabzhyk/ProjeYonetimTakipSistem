@@ -1,0 +1,135 @@
+@model ProjeYonetimTakipSistem.Models.ViewModels.KullaniciOlusturViewModel
+
+@{
+    ViewData["Title"] = "Yeni Kullanıcı";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" autocomplete="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label"></label>
+                    <input asp-for="FirstName" class="form-control" autocomplete="given-name" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label"></label>
+                    <input asp-for="LastName" class="form-control" autocomplete="family-name" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <div class="input-group">
+                        <input asp-for="Password" class="form-control" type="password" autocomplete="new-password" />
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <div class="form-text">
+                        <small class="text-muted">Şifre aşağıdaki gereksinimleri karşılamalıdır:</small>
+                        <ul class="mb-0 ps-3">
+                            <li><small>En az 6 karakter uzunluğunda</small></li>
+                            <li><small>En az 1 büyük harf (A-Z)</small></li>
+                            <li><small>En az 1 küçük harf (a-z)</small></li>
+                            <li><small>En az 1 rakam (0-9)</small></li>
+                            <li><small>En az 1 özel karakter (!#$%^&*)</small></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <div class="input-group">
+                        <input asp-for="ConfirmPassword" class="form-control" type="password" autocomplete="new-password" />
+                        <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Roller</label>
+                    @Html.HiddenFor(m => m.SelectedRoles[0], new { Value = "User" })
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" checked disabled />
+                        <label class="form-check-label">User (Varsayılan)</label>
+                    </div>
+                    @if (Model.AllRoles != null)
+                    {
+                        foreach (var role in Model.AllRoles.Where(r => r != "User"))
+                        {
+                            <div class="form-check">
+                                <input type="checkbox" name="SelectedRoles" value="@role" class="form-check-input" id="role_@role" />
+                                <label class="form-check-label" for="role_@role">@role</label>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save"></i> Kaydet
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Listeye Dön
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Form gönderimi
+            $('form').on('submit', function () {
+                if ($(this).valid()) {
+                    $(this).find('button[type="submit"]').prop('disabled', true);
+                }
+            });
+
+            // Şifre görünürlüğü
+            $('#togglePassword').click(function () {
+                var input = $('#Password');
+                var icon = $(this).find('i');
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('bi-eye').addClass('bi-eye-slash');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('bi-eye-slash').addClass('bi-eye');
+                }
+            });
+
+            $('#toggleConfirmPassword').click(function () {
+                var input = $('#ConfirmPassword');
+                var icon = $(this).find('i');
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('bi-eye').addClass('bi-eye-slash');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('bi-eye-slash').addClass('bi-eye');
+                }
+            });
+        });
+    </script>
+} 

@@ -1,0 +1,95 @@
+@model ProjeYonetimTakipSistem.Models.Gorev
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Görev Detayları";
+    var currentUser = await UserManager.GetUserAsync(User);
+    var isAdmin = await UserManager.IsInRoleAsync(currentUser, "Admin");
+    var isAssigned = Model.AtananKullaniciId == currentUser.Id;
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="card-title">@Model.Ad</h4>
+                    <div class="mb-3">
+                        <span class="badge bg-@(Model.Durum == GorevDurumu.Baslamadi ? "secondary" :
+                                              Model.Durum == GorevDurumu.DevamEdiyor ? "primary" :
+                                              Model.Durum == GorevDurumu.Tamamlandi ? "success" :
+                                              "danger")">
+                            @Model.Durum.ToString()
+                        </span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h5>Açıklama</h5>
+                        <p>@(string.IsNullOrEmpty(Model.Aciklama) ? "Açıklama bulunmuyor." : Model.Aciklama)</p>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h5>Proje</h5>
+                            <p>@Model.Proje?.Ad</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Atanan Kullanıcı</h5>
+                            <p>@Model.AtananKullanici?.Email</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h5>Başlangıç Tarihi</h5>
+                            <p>@Model.BaslangicTarihi.ToShortDateString()</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Bitiş Tarihi</h5>
+                            <p>@Model.BitisTarihi.ToShortDateString()</p>
+                        </div>
+                    </div>
+                </div>
+
+                @if (isAdmin || isAssigned)
+                {
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Durum Güncelle</h5>
+                                <form asp-action="UpdateDurum" method="post">
+                                    <input type="hidden" name="id" value="@Model.Id" />
+                                    <div class="form-group mb-3">
+                                        <select name="durum" class="form-select" asp-items="Html.GetEnumSelectList<GorevDurumu>()">
+                                            <option value="@Model.Durum" selected>@Model.Durum.ToString()</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @if (isAdmin)
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Düzenle</a>
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Sil</a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+    </div>
+</div> 

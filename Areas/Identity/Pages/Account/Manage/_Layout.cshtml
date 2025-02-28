@@ -1,0 +1,42 @@
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout != null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+<div class="container">
+    <h2 class="mb-4">Hesap Ayarları</h2>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Ayarlar</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">
+                        <i class="bi bi-person me-2"></i>Profil
+                    </a>
+                    <a class="list-group-item list-group-item-action @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">
+                        <i class="bi bi-envelope me-2"></i>E-posta
+                    </a>
+                    <a class="list-group-item list-group-item-action @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">
+                        <i class="bi bi-key me-2"></i>Şifre
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+} 

@@ -1,0 +1,159 @@
+@model ProjeYonetimTakipSistem.Models.Proje
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Proje Detayları";
+    var currentUser = await UserManager.GetUserAsync(User);
+    var isAdmin = await UserManager.IsInRoleAsync(currentUser, "Admin");
+}
+
+<div class="container">
+    <h1>@Model.Ad</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Proje Bilgileri</h5>
+                    <div class="mb-3">
+                        <span class="badge @(Model.Durum == ProjeDurumu.Baslamadi ? "bg-secondary" :
+                                           Model.Durum == ProjeDurumu.DevamEdiyor ? "bg-primary" :
+                                           Model.Durum == ProjeDurumu.Tamamlandi ? "bg-success" :
+                                           "bg-danger")">
+                            @Model.Durum.ToString()
+                        </span>
+                    </div>
+                    <p class="card-text">@Model.Aciklama</p>
+                    <dl class="row">
+                        <dt class="col-sm-4">Başlangıç Tarihi</dt>
+                        <dd class="col-sm-8">@Model.BaslangicTarihi.ToShortDateString()</dd>
+
+                        <dt class="col-sm-4">Bitiş Tarihi</dt>
+                        <dd class="col-sm-8">@Model.BitisTarihi.ToShortDateString()</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Proje Üyeleri</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.ProjeKullanicilari.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Kullanıcı</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var projeKullanici in Model.ProjeKullanicilari)
+                                    {
+                                        <tr>
+                                            <td>@projeKullanici.Kullanici.Email</td>
+                                            <td>
+                                                @if (isAdmin)
+                                                {
+                                                    <form asp-action="KullaniciCikar" method="post" style="display: inline;">
+                                                        <input type="hidden" name="projeId" value="@Model.Id" />
+                                                        <input type="hidden" name="kullaniciId" value="@projeKullanici.KullaniciId" />
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Kullanıcıyı projeden çıkarmak istediğinize emin misiniz?')">
+                                                            Çıkar
+                                                        </button>
+                                                    </form>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="mb-0">Henüz projeye atanmış kullanıcı bulunmuyor.</p>
+                    }
+                </div>
+                @if (isAdmin)
+                {
+                    <div class="card-footer">
+                        <a asp-action="KullaniciAta" asp-route-id="@Model.Id" class="btn btn-primary">Kullanıcı Ekle</a>
+                    </div>
+                }
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Görevler</h5>
+                    @if (isAdmin)
+                    {
+                        <a asp-controller="Gorev" asp-action="Create" asp-route-projeId="@Model.Id" class="btn btn-primary btn-sm">
+                            Yeni Görev Ekle
+                        </a>
+                    }
+                </div>
+                <div class="card-body">
+                    @if (Model.Gorevler != null && Model.Gorevler.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Görev Adı</th>
+                                        <th>Atanan Kişi</th>
+                                        <th>Başlangıç</th>
+                                        <th>Bitiş</th>
+                                        <th>Durum</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var gorev in Model.Gorevler)
+                                    {
+                                        <tr>
+                                            <td>@gorev.Ad</td>
+                                            <td>@(gorev.AtananKullanici?.Email ?? "Atanmamış")</td>
+                                            <td>@gorev.BaslangicTarihi.ToShortDateString()</td>
+                                            <td>@gorev.BitisTarihi.ToShortDateString()</td>
+                                            <td>
+                                                <span class="badge @(gorev.Durum == GorevDurumu.Baslamadi ? "bg-secondary" :
+                                                                   gorev.Durum == GorevDurumu.DevamEdiyor ? "bg-primary" :
+                                                                   gorev.Durum == GorevDurumu.Tamamlandi ? "bg-success" :
+                                                                   "bg-danger")">
+                                                    @gorev.Durum.ToString()
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Gorev" asp-action="Details" asp-route-id="@gorev.Id" class="btn btn-info btn-sm">Detay</a>
+                                                @if (isAdmin)
+                                                {
+                                                    <a asp-controller="Gorev" asp-action="Edit" asp-route-id="@gorev.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="mb-0">Bu projede henüz görev bulunmuyor.</p>
+                    }
+                </div>
+            </div>
+
+            <div>
+                @if (isAdmin)
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Düzenle</a>
+                }
+                <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+            </div>
+        </div>
+    </div>
+</div> 

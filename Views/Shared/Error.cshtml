@@ -1,0 +1,25 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Hata";
+}
+
+<h1 class="text-danger">Hata.</h1>
+<h2 class="text-danger">İsteğiniz işlenirken bir hata oluştu.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>İstek ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Geliştirme Modu</h3>
+<p>
+    <strong>Geliştirme</strong> moduna geçiş yapmak, oluşan hata hakkında daha detaylı bilgi görüntüleyecektir.
+</p>
+<p>
+    <strong>Geliştirme modu, yayınlanan uygulamalarda etkin olmamalıdır.</strong>
+    Bu mod, son kullanıcılara hassas hata bilgilerinin gösterilmesine neden olabilir.
+    Yerel hata ayıklama için, <strong>ASPNETCORE_ENVIRONMENT</strong> ortam değişkenini <strong>Development</strong> olarak ayarlayın
+    ve uygulamayı yeniden başlatın.
+</p>

@@ -1,0 +1,55 @@
+@model ProjeYonetimTakipSistem.Models.ViewModels.KullaniciAtaViewModel
+
+@{
+    ViewData["Title"] = "Kullanıcı Ata";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">@ViewData["Title"] - @Model.Proje.Ad</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="KullaniciAta" method="post">
+                        <input type="hidden" asp-for="ProjeId" />
+                        <div class="mb-3">
+                            <h5>Mevcut Kullanıcılar</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Seç</th>
+                                            <th>Ad</th>
+                                            <th>Soyad</th>
+                                            <th>E-posta</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var kullanici in Model.Kullanicilar)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="selectedKullanicilar" value="@kullanici.Id"
+                                                           @(Model.Proje.ProjeKullanicilari.Any(pk => pk.KullaniciId == kullanici.Id) ? "checked" : "") />
+                                                </td>
+                                                <td>@kullanici.FirstName</td>
+                                                <td>@kullanici.LastName</td>
+                                                <td>@kullanici.Email</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                            <a asp-action="Details" asp-route-id="@Model.ProjeId" class="btn btn-secondary">İptal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

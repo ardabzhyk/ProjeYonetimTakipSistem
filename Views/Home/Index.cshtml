@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hoş Geldiniz</h1>
+    <p>Proje Yönetim ve Takip Sistemine hoş geldiniz.</p>
+</div>
+
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Projeler</h5>
+                    <p class="card-text">Projelerinizi görüntüleyin ve yönetin.</p>
+                    <a asp-controller="Proje" asp-action="Index" class="btn btn-primary">Projelere Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Görevler</h5>
+                    <p class="card-text">Görevlerinizi görüntüleyin ve yönetin.</p>
+                    <a asp-controller="Gorev" asp-action="Index" class="btn btn-primary">Görevlere Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row mt-4">
+        <div class="col-md-12 text-center">
+            <p>Sistemi kullanmak için lütfen <a asp-area="Identity" asp-page="/Account/Login">giriş yapın</a> veya <a asp-area="Identity" asp-page="/Account/Register">kayıt olun</a>.</p>
+        </div>
+    </div>
+} 

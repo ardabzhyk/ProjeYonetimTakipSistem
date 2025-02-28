@@ -1,0 +1,47 @@
+@model ProjeYonetimTakipSistem.Models.ViewModels.KullaniciListViewModel
+
+@{
+    ViewData["Title"] = "Kullanıcı Sil";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="alert alert-danger">
+        <h4>Bu kullanıcıyı silmek istediğinize emin misiniz?</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Email)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.FirstName)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.FirstName)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.LastName)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.LastName)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Roles)</dt>
+                        <dd class="col-sm-8">@string.Join(", ", Model.Roles)</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Sil
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Listeye Dön
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
